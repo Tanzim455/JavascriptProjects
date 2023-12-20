@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="p-8">
+
+    <ul id="menu" class="flex space-x-4 mb-4">
+        <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#services" class="hover:text-blue-500">Services</a></li>
+        <li><a href="#about" class="hover:text-blue-500">About</a></li>
+        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+        <li><a href="#support" class="hover:text-blue-500">Support</a></li>
+    </ul>
+
+    <div id="home" class="tab-content block">
+        <p class="bg-green-100 p-4">Home content...</p>
+    </div>
+    <div id="services" class="tab-content hidden">
+        <p class="bg-yellow-100 p-4">Services content...</p>
+    </div>
+    <div id="about" class="tab-content hidden">
+        <p class="bg-blue-100 p-4">About content...</p>
+    </div>
+    <div id="contact" class="tab-content hidden">
+        <p class="bg-red-100 p-4">Contact content...</p>
+    </div>
+    <div id="support" class="tab-content hidden">
+        <p class="bg-purple-100 p-4">Support content...</p>
+    </div>
+
+    <script>
+        const menuItems = document.querySelectorAll('#menu a');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', e => {
+                e.preventDefault();
+
+                // Remove 'hidden' class from all tab contents
+                tabContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+
+                // Remove 'text-blue-500' from all menu items
+              
+
+                // Add 'hidden' class to all tab contents except the clicked one
+                const target = document.querySelector(e.target.getAttribute('href'));
+                target.classList.remove('hidden');
+
+                // Add 'text-blue-500' to the clicked menu item
+                
+            });
+        });
+    </script>
+</body>
+</html>
