@@ -4,30 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     
 </head>
 <body>
-   
     <div>
-
+        <form>
+            <label for="framework"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select a Category</label>
+            <select id="framework" onchange="change()"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block xl:w-1/6 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            
+            >
+                
+                
+            </select>
+            <button id="btn">Get the Selected Value</button>
+        </form>
+        <div class="display"></div>
     </div>
-    <form action="" class="form" method="post">
-        <select class="select" onchange="change()">
+    <div class="container ">
         
+            <h5 class="categoryheading mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></h5>
         
-        </select>
+        <p class="para"></p>
+        <p class="cat"></p>
+        <!-- <p class="title">Title</p> -->
        
-        <input type="number" class="amount" name="" placeholder="Place the amount" id="">
-        <input type="text" class="type" name="" placeholder="Place the text" id="">
-      
-    <button>Send</button>
-    </form>
-   
-        <select class="incomeexpensefilter">
-        
-        
-        </select>
-        <script src="script2.js"></script>
-    
+    </div>
+    <div class="display"></div>
+    <script src="script3.js"></script>
 </body>
 </html>
